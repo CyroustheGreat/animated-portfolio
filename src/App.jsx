@@ -1,9 +1,11 @@
 import "./App.scss";
+import "./components/navbar/Navbar.jsx";
+import Navbar from "./components/navbar/Navbar.jsx";
 const App = () => {
   return (
     <div>
       <section>
-        <a href="">Hello</a>
+        <Navbar />
       </section>
       <section>Parallax</section>
       <section>Services</section>
