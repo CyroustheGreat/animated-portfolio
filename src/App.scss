@@ -25,3 +25,11 @@ section{
     height: 100vh;
     scroll-snap-align: center; /*put the scroll in center when moving it up or down*/
 }
+
+.course {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
