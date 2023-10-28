@@ -6,7 +6,8 @@
   flex-direction: column;
   justify-content: space-between; /*I should devide the vertical space between 1 2 2 with flex*/
 
-  @include tablet {
+  @include mobile {
+    transform: none !important; //to solve the mobile display issue
   }
 }
 
@@ -151,8 +152,6 @@
     grid-template-rows: 50% 50%;
     width: 100%;
   }
-  @include mobile {
-  }
 
   .box {
     padding: 50px;
@@ -170,7 +169,7 @@
       @include tablet {
         font-size: 20px;
       }
-      @include tablet {
+      @include mobile {
         font-size: 13px;
       }
     }
