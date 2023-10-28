@@ -51,7 +51,10 @@ const Single = ({ item }) => {
           <div className="textContainer">
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button onClick={() => window.open(item.adr, "_blank")}>
+            <button
+              onTouchStart={() => window.open(item.adr, "_blank")}
+              onClick={() => window.open(item.adr, "_blank")}
+            >
               See Demo
             </button>
           </div>
