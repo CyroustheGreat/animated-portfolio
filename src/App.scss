@@ -1,35 +1,51 @@
-html{
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth; /*Animation will be slower*/
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth; /*Animation will be slower*/
 }
 
 /*to remove spaces*/
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "DM Sans", sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
 }
 
-body{
-    background-color: #0c0c1d;
-    color:lightgray
+body {
+  background-color: #0c0c1d;
+  color: lightgray;
 }
 
-a{
-    text-decoration: none;
-    color: inherit; /*it takes its color from its parent*/
+a {
+  text-decoration: none;
+  color: inherit; /*it takes its color from its parent*/
 }
 
-section{
-    height: 100vh;
-    scroll-snap-align: center; /*put the scroll in center when moving it up or down*/
+section {
+  height: 100vh;
+  scroll-snap-align: center; /*put the scroll in center when moving it up or down*/
 }
 
 .course {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+/*it's a function*/
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 1366px) {
+    @content;
+  }
 }

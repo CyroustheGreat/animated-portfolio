@@ -51,9 +51,7 @@ const Hero = () => {
             Web Developer and Embedded System Programmer
           </motion.h1>
           <motion.div className="buttons" variants={textVariants}>
-            <motion.button variants={textVariants}>
-              See My Lastest Works
-            </motion.button>
+            <motion.button variants={textVariants}>Lastest Works</motion.button>
             <motion.button variants={textVariants}>Contact Me</motion.button>
           </motion.div>
           <motion.img

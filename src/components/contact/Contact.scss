@@ -1,10 +1,26 @@
+@import "../../App.scss";
+@import "../features/Features.scss";
 .contact {
   max-width: 1366px;
   height: 100%;
-  margin: auto;
+  margin: 20px;
   display: flex;
   align-items: center;
   gap: 50px;
+
+  @include tablet {
+    width: 100%;
+    padding: 10px;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    gap: 30px;
+  }
 
   .textContainer {
     flex: 1;
@@ -15,10 +31,30 @@
 
     align-self: center;
 
+    @include mobile {
+      padding: 10px;
+      margin: 2.5rem;
+      margin-bottom: 0;
+      align-items: flex-start;
+    }
+
     h1 {
       font-size: 80px;
       line-height: 88px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+
+      @include mobile {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 2px;
+        font-size: 36px;
+      }
+    }
+
+    @include mobile {
+      .Container {
+        margin: 0;
+      }
     }
   }
   .formContainer {
@@ -33,7 +69,13 @@
     form {
       display: flex;
       flex-direction: column;
+      margin: 1rem;
       gap: 20px;
+      @include mobile {
+        width: 400px;
+        padding-top: 0;
+        align-items: center;
+      }
       input,
       textarea {
         padding: 20px;
@@ -41,6 +83,12 @@
         border: 1px solid white;
         color: white;
         border-radius: 5px;
+
+        @include mobile {
+          width: 70%;
+
+          padding: 10px;
+        }
       }
     }
 
@@ -51,6 +99,12 @@
       background-color: orange;
       cursor: pointer;
       font-weight: 500;
+
+      @include mobile {
+        padding: 10px;
+        width: 40%;
+        margin-bottom: 1rem;
+      }
     }
   }
 }
